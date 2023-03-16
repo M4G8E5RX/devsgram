@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -20,5 +21,8 @@ Route::get('/', function () {
 
 Route::get('/registrar', [RegisterController::class, 'index'])->name("register");
 Route::post('/registrar', [RegisterController::class, 'store']);
+
+Route::get('/ingresar', [LoginController::class, 'index'])->name("login");
+
 
 Route::get('/feed', [PostController::class, 'index'])->name('posts.index');

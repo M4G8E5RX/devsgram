@@ -37,6 +37,7 @@ class RegisterController extends Controller
         //UNA VEZ GUARDADO SE REALIZA AUTENTICACIÓN DEL USUARIO
         auth()->attempt([
             "email" => $Request->email,
+            "username" => $Request->username,
             "password" => $Request->password
         ]);
 
